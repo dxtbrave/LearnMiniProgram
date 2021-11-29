@@ -1,6 +1,32 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "云天商城",
+    "backgroundColor": "#ff5777",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "assets/img/tabbar/home.png",
+      "selectedIconPath": "assets/img/tabbar/home_active.png"
+    },
+    {
+      "pagePath": "pages/about/about",
+      "text": "分类",
+      "iconPath": "assets/img/tabbar/category.png",
+      "selectedIconPath": "assets/img/tabbar/category_active.png"
+    }
   ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

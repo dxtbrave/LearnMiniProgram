@@ -1,7 +1,6 @@
-// pages/home/home.js
-const app = getApp()
-
+// pages/profile/profile.js
 Page({
+
   /**
    * 页面的初始数据
    */
@@ -27,8 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(app.globalData.name);
-    console.log(app.globalData.age);
+
   },
 
   /**
@@ -44,17 +42,7 @@ Page({
   onUnload: function () {
 
   },
-  /**
-   * 
-   */
-  handleUserProfile(event){
-      wx.getUserProfile({
-        desc: '展示用户信息',
-        success:res=>{
-          console.log(res);
-        }
-      })
-  },
+
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

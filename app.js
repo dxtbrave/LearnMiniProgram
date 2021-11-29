@@ -1,0 +1,16 @@
+App({
+  onLaunch(){
+    console.log('界面被初始化');
+  },
+  onShow(options){
+    console.log(options);
+    console.log('界面显示出来');
+  },
+  onHide(){
+    console.log('界面隐藏');
+  },
+  globalData:{
+    name:'dxt',
+    age:18
+  }
+})
