@@ -1,0 +1,18 @@
+<!--pages/input/input.wxml-->
+<!-- 1.input的基本使用 -->
+<input/>
+
+<!-- 2.value:input中的默认值 -->
+<input value="哈哈哈" />
+
+<!-- 3.type:决定键盘类型(英文字母+其他符号/数字/身份证) -->
+<input type="text" />
+<input type="number" />
+<input type="idcard" />
+<input type="cligit" />
+
+<!-- 4.password:暗文 -->
+<input password  />
+
+<!-- 5.占位文字 -->
+<input placeholder="请输入内容" />

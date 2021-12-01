@@ -1,0 +1,4 @@
+<template name="component">
+  <button>{{btnContent}}</button>
+  <text>{{message}}</text>
+</template>

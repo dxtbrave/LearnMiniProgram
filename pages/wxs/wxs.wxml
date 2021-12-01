@@ -1,0 +1,6 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- wxs的应用 -->
+<!-- 导入wxs -->
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+
+<view>{{format.priceFormat(25.66666666,3)}}</view>

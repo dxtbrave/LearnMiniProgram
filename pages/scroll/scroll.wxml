@@ -1,0 +1,25 @@
+<!--pages/scroll/scroll.wxml-->
+<import src="/pages/wxml/template.wxml" />
+<!-- 1.水平滚动 -->
+<scroll-view  class="container1"  scroll-x>
+  <view wx:for="{{10}}" class="item1" wx:key="index">{{index}}</view>
+</scroll-view>
+
+<!-- 2.垂直滚动 -->
+<scroll-view  class="container2"  scroll-y>
+  <view wx:for="{{10}}" class="item2" wx:key="index">{{item}}</view>
+</scroll-view>
+
+<!-- 3.其他补充 -->
+<scroll-view  class="container2"  
+              scroll-y 
+              scroll-with-animation
+              enable-back-to-top
+              bindscroll="handleScroll">
+  <view wx:for="{{10}}" class="item2" wx:key="index">{{item}}</view>
+</scroll-view>
+
+<template is="component" data="{{btnContent:'警告',message:'哈哈哈哈'}}" />
+<template is="component" data="{{btnContent:'警告',message:'哈哈哈哈'}}" />
+<template is="component" data="{{btnContent:'警告',message:'哈哈哈哈'}}" />
+<template is="component" data="{{btnContent:'警告',message:'哈哈哈哈'}}" />
