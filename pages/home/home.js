@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    titles:['衣服','裤子','鞋子']
   },
 
   /**
@@ -49,18 +49,46 @@ Page({
   onPullDownRefresh: function () {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleBtnClick(event){
+    console.log('发生了点击');
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+  handleTouchStart(){
+    console.log('handleTouchStart');
+  },
+  handleTouchMove(){
+    console.log('handleTouchMove');
+  },
+  handleTouchEnd(){
+    console.log('handleTouchEnd');
+  },
+  handleTap(){
+    console.log('handleTap');
+  },
+  handleLongpress(){
+    console.log('handleLongpress');
+  },
+  handleEvenetClick(event){
+    console.log(event);
+  },
+  handleItemClick(event){
+    console.log(event);
+  },
+  handleCapture1(){
+    console.log('handleCapture1');
+  },
+  handleCapture2(){
+    console.log('handleCapture2');
+  },
+  handleCapture3(){
+    console.log('handleCapture3');
+  },
+  handleBind1(){
+    console.log('handleBind1');
+  },
+  handleBind2(){
+    console.log('handleBind2');
+  },
+  handleBind3(){
+    console.log('handleBind3');
+  },
 })
