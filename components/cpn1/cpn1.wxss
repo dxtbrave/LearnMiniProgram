@@ -1,0 +1,4 @@
+/* components/cpn1/cpn1.wxss */
+.content{
+  background-color: brown;
+}

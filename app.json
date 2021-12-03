@@ -2,5 +2,10 @@
   "pages": [
     "pages/home/home",
     "pages/about/about"
-  ]
+  ],
+  "usingComponents": {
+    "my-prop": "/components/my-prop/my-prop",
+    "my-event": "/components/my-event/my-event"
+  },
+  "sitemapLocation": "sitemap.json"
 }

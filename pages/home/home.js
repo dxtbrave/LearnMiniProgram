@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter:0
   },
 
   /**
@@ -62,5 +62,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleIncrement(){
+    this.setData({
+      counter: this.data.counter + 1 
+    })
+  },
+  handleControClick(event){
+      console.log(event);
+  },
+  handleIncrementCpn(){
+    const my_sel = this.selectComponent('#my-sel')
+    my_sel.increamentCounter(10)
   }
 })
