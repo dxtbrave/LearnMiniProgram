@@ -62,5 +62,39 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleShowToast(){
+    wx.showToast({
+      title: '加载中...',
+      duration:3000,
+      icon:'loading',
+      mask:true
+    })
+  },
+  handleShowModal(){
+    wx.showModal({
+      title:'我是标题',
+      content:'我是内容',
+      success:res=>{
+        console.log(res);
+        if(res.cancel){
+          console.log('用户点击了取消按钮');
+        }
+        if(res.confirm){
+          console.log('用户点击了确定按钮');
+        }
+      }
+    })
+  },
+  handleShowLoading(){
+    wx.showLoading({
+      title: '加载中...',
+      mask:true,
+    })
+  },
+  handleShowActionSheet(){
+    wx.showActionSheet({
+      itemList: ['相册','转发'],
+    })
   }
 })
