@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
   },
 
   /**
@@ -63,9 +63,9 @@ Page({
   onShareAppMessage: function () {
 
   },
-  handlePushDetail(){
-    wx.navigateTo({
-      url:'/pages/detail/detail?name=dxt&age=18',
+  handleBackHome(){
+    wx.navigateBack({
+      delta: 1,
     })
   }
 })
