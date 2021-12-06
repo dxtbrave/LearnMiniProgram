@@ -1,3 +1,47 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World!</text>
-<button size="mini">按钮</button>
+
+<!-- <scroll-view scroll-y class="scroll"> -->
+<!-- 1.展示轮播图  -->
+<w-swiper swiper="swiper" list="{{banners}}" />
+
+<!-- 2.推荐数据展示 -->
+<w-recommend list="{{recommends}}" />
+
+<!-- 3.展示本周流行 -->
+<w-popular />
+
+<!-- 4.tabControl -->
+<!-- <w-tab-control titles="{{titles}}"
+                 bind:tabClick="handleTabClick"  /> -->
+<van-tabs sticky animated bind:change="handleTabClick">
+  <block wx:for="{{titles}}" wx:key="index">
+    <van-tab title="{{item}}" >
+      <view class="goods">
+        <block wx:for="{{goods[currentType].list}}" wx:key="index">
+          <w-goods-item class="item" item="{{item}}"/>
+      </block>
+      </view>
+    </van-tab>
+  </block>
+</van-tabs>
+
+<!-- 6.加载loading组件 -->
+<view class="loading">
+  <van-loading color="#ff5777"
+             type="spinner" 
+             vertical />
+</view>
+
+<!-- 7.回到顶部 -->
+<w-back-top wx:if="{{isBackTop}}"/>
+
+<!-- 5.展示商品数据 -->
+<!-- <view class="goods">
+    <block wx:for="{{goods[currentType].list}}" wx:key="index">
+      <view>{{item.title}}</view>
+      <view>---------------------</view>
+    </block>
+  </view> -->
+
+<view style="height: 5rem;"></view>
+<!-- </scroll-view> -->

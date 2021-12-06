@@ -1,0 +1,8 @@
+/* pages/home/childCpns/w-popular/w-popular.wxss */
+.popular{
+  height: 550rpx;
+}
+.popular image{
+  width: 100%;
+  height: 100%;
+}

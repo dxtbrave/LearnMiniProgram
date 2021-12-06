@@ -1,3 +1,14 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "购物街",
+  "usingComponents": {
+    "w-swiper":"/components/w-swiper/w-swiper",
+    "w-recommend":"/pages/home/childCpns/w-recommend/w-recommend",
+    "w-popular":"/pages/home/childCpns/w-popular/w-popular",
+    "w-tab-control":"/components/w-tab-control/w-tab-control",
+    "w-goods-item":"/components/w-goods-item/w-goods-item",
+    "w-back-top":"/components/w-back-top/w-back-top",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-loading": "@vant/weapp/loading/index"
+  }
 }
