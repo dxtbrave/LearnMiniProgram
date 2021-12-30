@@ -1,0 +1,13 @@
+/* pages/detail/childCpns/w-recommend-info/w-recommend-info.wxss */
+.recommend {
+  padding: 10rpx 0;
+}
+
+.header {
+  padding-left: 30rpx;
+  padding-bottom: 30rpx;
+  /* padding: 10rpx 30rpx; */
+  font-size: 32rpx;
+  margin: 10rpx;
+  border-bottom: 1px solid #eee;
+}

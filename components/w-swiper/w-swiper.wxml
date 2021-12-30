@@ -8,7 +8,7 @@
         indicator-dots>
   <block wx:for="{{list}}" wx:key="index">
     <swiper-item class="swiper-item">
-      <image src="{{item.image}}"></image>
+      <image src="{{item.image || item}}"></image>
     </swiper-item>
   </block>
 </swiper>

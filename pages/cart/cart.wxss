@@ -1,1 +1,38 @@
 /* pages/cart/cart.wxss */
+.cart{
+  height: 100vh;
+}
+.cart-list{
+  height: calc(100% - 88rpx);
+}
+.title{
+  font-size: 30rpx;
+  font-weight: 700;
+  color:#333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.desc{
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card{
+  display: inline;
+  padding: 0!important;
+}
+.item{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  height: 165rpx;
+  line-height: 165rpx;
+}
+
+.checked{
+  padding-left: 10rpx;
+  margin-top:70rpx;
+}

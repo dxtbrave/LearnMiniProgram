@@ -1,0 +1,38 @@
+<!--pages/detail/detail.wxml-->
+<scroll-view class="detail" scroll-y>
+  <van-transition name="fade" show="{{ isShow }}">
+    <van-sticky>
+      <view class="row">
+        <view class="col" bind:tap="ScrollTop">
+          <text class="{{currentIndex == 0 ? 'content' : ''}}">商品</text>
+        </view>
+        <view class="col" bind:tap="ScrollParam">
+          <text class="{{currentIndex == 1 ? 'content' : ''}}">参数</text>
+        </view>
+        <view class="col" bind:tap="ScrollComment">
+          <text class="{{currentIndex == 2 ? 'content' : ''}}">评价</text>
+        </view>
+        <view class="col" bind:tap="ScrollRecommend">
+          <text class="{{currentIndex == 3 ? 'content' : ''}}">推荐</text>
+        </view>
+      </view>
+
+    </van-sticky>
+  </van-transition>
+  <van-toast id="van-toast" />
+  <w-swiper class="d-swiper" list="{{topImages}}" />
+  <base-info baseInfo="{{baseInfo}}" />
+  <shop-info shopInfo="{{shopInfo}}" />
+
+  <detail-info detailInfo="{{detailInfo}}" bind:imageLoad="imageLoad" />
+  <param-info class="paramInfo" paramInfo="{{paramInfo}}" />
+  <comment-info class="comment" commentInfo="{{commentInfo}}" />
+  <recommend-info class="recommend" recommends="{{recommends}}" />
+  <view class="loading">
+    <van-loading color="#ff5777" type="spinner" vertical />
+  </view>
+  <view style="height: 5rem;"></view>
+</scroll-view>
+
+
+<bottom-bar bind:addcart="onAddCart" />

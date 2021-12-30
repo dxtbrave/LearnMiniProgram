@@ -1,0 +1,12 @@
+<!--pages/detail/childCpns/bottom-bar/bottom-bar.wxml-->
+<van-goods-action>
+  <van-goods-action-icon icon="chat-o" text="客服" />
+  <van-goods-action-icon icon="shop-o" text="店铺"  />
+  <van-goods-action-icon icon="star-o" text="收藏"  />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="onAddCart"
+  />
+  <van-goods-action-button text="立即购买"/>
+</van-goods-action>

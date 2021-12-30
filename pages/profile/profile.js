@@ -1,11 +1,21 @@
 // pages/profile/profile.js
+import Toast from '@vant/weapp/toast/toast';
+import Dialog from '@vant/weapp/dialog/dialog';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    orderList: [
+      { icon: 'chat-o', info: '我的消息' },
+      { icon: 'points', info: '积分商城' },
+      { icon: 'vip-card-o', info: '会员卡' },
+    ],
+    serviceList: [
+      { icon: 'cart-o', info: '我的购物车' },
+      { icon: 'goods-collect-o', info: '下载购物APP' },
+    ]
   },
 
   /**
@@ -26,12 +36,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-    this.getTabBar()) {
-    this.getTabBar().setData({
-      active: 3
-    })
-  }
+
   },
 
   /**
@@ -67,5 +72,26 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  showLoading(){
+    Toast.loading({
+      message: '加载中...',
+      forbidClick: true,
+      duration:0
+    });
+  },
+  closeLoading(){
+    Toast.clear()
+  },
+  showDialog(){
+    const header = this.selectComponent('#header')
+    Dialog.confirm({
+      message: '是否退出登录？',
+    })
+      .then(() => {
+        header.Signout()
+      })
+      .catch(() => {
+      });
   }
 })

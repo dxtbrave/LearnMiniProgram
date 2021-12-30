@@ -46,9 +46,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getTabBar().setData({
-      active:0
-    })
+    // this.getTabBar().setData({
+    //   active:0
+    // })
   },
 
   /**
@@ -93,8 +93,8 @@ Page({
       // 取出轮播图和推荐的数据
       // 将banners和recommends放到data中
       this.setData({
-        banners:res.data.data.banner.list,
-        recommends:res.data.data.recommend.list
+        banners:res.data.banner.list,
+        recommends:res.data.recommend.list
       })
     })
   },
@@ -108,7 +108,7 @@ Page({
     // 2.发送网络请求
     getGoodsData(type,page).then(res=>{
       // 2.1取出数据
-      const list = res.data.data.list
+      const list = res.data.list
       // 2.2将数据设置到对应type的list中
       const oldList = this.data.goods[type].list
       oldList.push(...list)

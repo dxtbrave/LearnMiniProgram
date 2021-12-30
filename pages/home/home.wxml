@@ -1,6 +1,4 @@
 <!--pages/home/home.wxml-->
-
-<!-- <scroll-view scroll-y class="scroll"> -->
 <!-- 1.展示轮播图  -->
 <w-swiper swiper="swiper" list="{{banners}}" />
 
@@ -11,8 +9,6 @@
 <w-popular />
 
 <!-- 4.tabControl -->
-<!-- <w-tab-control titles="{{titles}}"
-                 bind:tabClick="handleTabClick"  /> -->
 <van-tabs sticky animated bind:change="handleTabClick">
   <block wx:for="{{titles}}" wx:key="index">
     <van-tab title="{{item}}" >
@@ -33,15 +29,6 @@
 </view>
 
 <!-- 7.回到顶部 -->
-<w-back-top wx:if="{{isBackTop}}"/>
-
-<!-- 5.展示商品数据 -->
-<!-- <view class="goods">
-    <block wx:for="{{goods[currentType].list}}" wx:key="index">
-      <view>{{item.title}}</view>
-      <view>---------------------</view>
-    </block>
-  </view> -->
-
-<view style="height: 5rem;"></view>
-<!-- </scroll-view> -->
+<van-transition show="{{ isBackTop }}">
+  <w-back-top/>
+</van-transition>

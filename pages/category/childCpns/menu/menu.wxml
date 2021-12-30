@@ -1,0 +1,8 @@
+<!--pages/category/childCpns/menu/menu.wxml-->
+<scroll-view class='menu' scroll-y>
+  <van-sidebar active-key="{{ activeKey }}" bind:change="onChange" custom-class="van-sidebar"  >
+    <block wx:for="{{categories}}" wx:key="index">
+       <van-sidebar-item title="{{item.title}}"  />
+    </block>
+  </van-sidebar>
+</scroll-view>

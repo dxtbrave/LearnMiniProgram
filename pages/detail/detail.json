@@ -1,0 +1,23 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "w-swiper":"/components/w-swiper/w-swiper",
+    "base-info":"/pages/detail/childCpns/base-info/base-info",
+    "shop-info":"/pages/detail/childCpns/shop-info/shop-info",
+    "detail-info":"/pages/detail/childCpns/detail-info/detail-info",
+    "param-info":"/pages/detail/childCpns/param-info/param-info",
+    "comment-info":"/pages/detail/childCpns/comment-info/comment-info",
+    "recommend-info":"/pages/detail/childCpns/recommend-info/recommend-info",
+    "bottom-bar":"/pages/detail/childCpns/bottom-bar/bottom-bar",
+    "back-top":"/components/w-back-top/w-back-top",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-transition": "@vant/weapp/transition/index"
+    
+  }
+}

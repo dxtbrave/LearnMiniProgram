@@ -1,0 +1,14 @@
+/* pages/category/childCpns/menu/menu.wxss */
+.menu {
+  height: 100vh;
+}
+.van-sidebar{
+  width: 100%;
+}
+van-sidebar-item{
+  text-align: center;
+}
+.acvite{
+  color: #ff5777;
+  font-weight: 700;
+}

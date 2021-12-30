@@ -1,2 +1,36 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="cart">
+  <scroll-view class="cart-list" scroll-y>
+  <block wx:for="{{cartList}}" wx:key="index">
+  <van-row custom-class="item">
+    <van-col span="2" custom-class="item-list">
+      <van-checkbox custom-class="checked" id="{{item.iid}}" data-index="{{index}}" value="{{ item.checked }}" bind:change="onCheckClick"></van-checkbox>
+    </van-col>
+    <van-col span="22">
+      <van-card title-class="title"
+              custom-class="card"
+              desc-class="desc"
+              num="{{item.count}}" 
+              price="{{item.price}}" 
+              desc="{{item.desc}}" 
+              title="{{item.title}}" 
+              thumb="{{ item.imageUrl }}" />
+    </van-col>
+  </van-row>
+    
+
+  </block>
+</scroll-view>
+<van-submit-bar
+  price="{{ totalPrice * 100}}"
+  button-text="结算({{cartList.length}})"
+  loading="{{isLoading}}"
+  bind:submit="onClickSubmmit"
+  tip="{{ true }}"
+>
+<van-checkbox value="{{isSelectAll}}" 
+              disabled="{{ cartList.length == 0 ? true : false  }}"
+              bind:change="onSelectAll">全选</van-checkbox>
+</van-submit-bar>
+
+</view>
